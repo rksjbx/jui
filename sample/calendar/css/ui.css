@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* 초기세팅 */
+* {margin:0; padding:0;}
+body {width:176px; margin:0; padding-top:7px; font-family:"돋움", "굴림", Arial, sans-serif, verdana, AppleGothic; font-size:10px; color:#333}
+img, fieldset {border:0}
+select, input, li img, td * {vertical-align:middle}
+a {color:#666; text-decoration:none}
+a:hover{text-decoration:none}
+a:link, a:visited, a:active, a:hover {color:#444}
+button {border:none; background:none; font-size:10px; text-indent:-5000px; cursor:pointer}
+caption {display:none}
+/* 콘텐츠 */
+div {position:relative; width:177px; height:196px; overflow:hidden; background: url("../img/body_bg.gif") left 4px no-repeat}
+table {width:175px; border:none; border-spacing:0; color:#666; background-color:#fff}
+table th,table td {border:none; text-align:center}
+table thead th {background:#545765; height:16px; font-size:1.1em; font-weight:normal; color:#e2e3e4}
+table tbody td {width:24px; height:19px; border-top:1px solid #ebebeb; border-left:1px solid #ebebeb}
+table tbody td.hover button,table tbody td button:hover {position:relative; width:26px; height:21px; border:1px solid #f58026; background:#fdf2da; margin:-1px}
+table tbody td.active button {border:3px solid #f58026; font-weight:bold; width:26px; height:21px; margin:-1px}
+table tbody td.active button:hover {background:none}
+table tbody td.sun {border-left:1px solid #ccc}
+th.sun {color:#dea0a5}
+th.sat {color:#9ebeff}
+td.sun button {color:#d44757}
+td.sat button {color:#69f}
+td.holi button {color:#d44757 !important}
+td.prevsun button,td.nextsun button,td.prevholi button,td.nextholi button {color:#de9fa8 !important}
+td.prevsat button,td.nextsat button {color:#9ebeff !important}
+td.today button {color:#7e39cc; font-size:10px; font-weight:bold; font-style: italic}
+table td button {float:left; width:24px; height:19px; text-indent:0; font-family:Arial, sans-serif, verdana, AppleGothic}
+tbody td.prev,tbody td.next {background: url("../img/cell_bg.gif") left no-repeat}
+tbody td.prev button,tbody td.next button {color:#999}
+tbody td.prev button:hover,tbody td.prev button.hover,tbody td.next button:hover,tbody td.next button.hover {text-decoration:underline; border:0 !important; background:none !important}
+tfoot td {border-top:1px solid #ccc; height:22px; background: url("../img/foot_bg.gif") no-repeat; font-size:11px; color:#f58026; text-align:left; letter-spacing:-1px; padding-left:5px}
+tfoot td span {display:block; position:relative}
+tfoot td button {position:absolute; right:3px; bottom: 0px; background: url("../img/btn_del.gif") left no-repeat; width:25px; height:14px; text-indent:-5000px}
+div.caption, x:-moz-any-link, x:default {height:35px}
+tfoot td, x:-moz-any-link, x:default {height:23px}
+tfoot td img {vertical-align:middle; position:relative; top:-1px}
+div.caption {height:35px; background: url("../img/head_bg.gif") no-repeat; padding-left:10px}
+div.caption span,div.caption button.today {float:left; display:inline; margin-top:8px}
+div.caption span {position:relative; width:60px; height:17px; background: url("../img/year_bg.gif") no-repeat; text-align:left; font-size:11px; padding-top:3px}
+div.caption span button {position:absolute; right:19px; top:3px; background: url("../img/btn_next.gif") no-repeat; width:10px; height:6px}
+div.caption span button.prevy,div.caption span button.prevm {top:10px; background: url("../img/btn_prev.gif") no-repeat}
+div.caption span button:hover,div.caption span button:focus {background-position:0 -6px}
+div.caption span.month {width:48px; background: url("../img/month_bg.gif") no-repeat}
+div.caption span input {width:28px; height:15px; font-size:11px; padding-left:4px; border:none; background:none; margin-right:11px; margin-top:-4px; padding-top:2px}
+div.caption span.month input {width:16px; padding-left:4px;}
+div.caption button.today {width:26px; height:15px; background: url("../img/btn_today.gif") no-repeat; margin:10px 0 0 3px}
+button.close {position:absolute; right:7px; top:7px; width:6px; height:5px; background: url("../img/btn_close.gif") no-repeat}
+p {position:absolute; border-bottom:2px solid #f0f0f0; padding-top:4px; top:30px; left:0}
+p img {position:absolute; top:0; left:28px}
+p span {float:left; padding:8px; width:106px; background:#fdfec2; border:1px solid #b4b4b4; font-size:11px; *font-size:12px; color:#666; word-break:break-all; letter-spacing:-1px}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	tfoot td button {top:-1px;}
+;}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0)
+{
+head~body tbody td.prev,tbody td.next {background: url("../img/cell_bg.gif") 1px 1px no-repeat}
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="nationality" content="korean" />
+<meta name="language" content="ko" />
+<meta name="content-language" content="kr" />
+<title>달력</title>
+<style>
+html,body {height:100%}
+body {margin:0; padding:0; font-family:"돋움", "굴림", Arial, sans-serif, verdana, AppleGothic; font-size:12px; color:#333}
+* {margin:0; padding:0;}
+select, textarea {border:1px solid #B7B6B6; background:#FFF; vertical-align:middle; font-size:1em}
+strong,b {font-weight:bold}
+img, fieldset {border:0}
+select, input, li img, span#location img,td *,fieldset * {vertical-align:middle}
+ul, li, ol {list-style-type : none}
+hr {display:none}
+a {color:#666; text-decoration:none}
+a:hover{text-decoration:none}
+a:link, a:visited, a:active, a:hover {color:#444}
+td * {vertical-align:middle}
+table {width:600px;border:none; border-spacing:0; color:#666}
+table th {padding-left:10px; background:#eee}
+table td {padding:5px}
+table td input {border:1px solid #e2e2e2}
+table th,table td {height:30px; border:none; border-bottom:1px solid #e2e2e2; text-align:left}
+</style>
+
+<link rel="stylesheet" href="/jui/sample/calendar/css/ui.css" type="text/css">
+
+<script type="text/javascript" src="/jui/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/jui/jquery.tmpl-b1.0.min.js"></script>
+<script type="text/javascript" src="/jui/jQuery.fn.jui.js"></script>
+<script type="text/javascript" src="/jui/jQuery.fn.jui.calendar.js"></script>
+<script type="text/javascript">
+$(function () {
+	$('.jui-calendar').jui('calendar');
+});
+</script>
+</head>
+<body>
+<div>
+	<table cellspacing="0" cellpadding="0" border="1" summary="">
+	<caption></caption>
+	<colgroup>
+		<col width="15%" />
+		<col width="*" />
+	</colgroup>
+	<tr>
+		<th scope="row"><label for="sdate">근무기간</label></th>
+		<td>
+			<input type="text" class="jui-calendar" id="sdate" name="sdate" size="12" value="" />
+			<input type="text" class="jui-calendar" id="edate" name="edate" size="12" value="" title="퇴사일" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">내용입력</th>
+		<td><textarea cols="60" rows="15"></textarea></td>
+	</tr>
+	</table>
+</div>
+
+	<table cellspacing="0" cellpadding="0" border="1" summary="키보드 상/하 버튼, 마우스 휠 동작등을 활용하여 신속하고 편리하게 날짜를 선택하실 수 있습니다.">
+	<caption id="caption">#{YYYY}년 #{M}월 #{D}일</caption>
+	<colgroup>
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+	</colgroup>
+	<thead>
+	<tr>
+		<th scope="col" class="sun">일</th>
+		<th scope="col">월</th>
+		<th scope="col">화</th>
+		<th scope="col">수</th>
+		<th scope="col">목</th>
+		<th scope="col">금</th>
+		<th scope="col" class="sat">토</th>
+	</tr>
+	</thead>
+	<tfoot>
+	<tr>
+		<td colspan="7">
+			<span>
+				<button class="clear" type="button">삭제</button>
+				<img src="img/ico_notice.gif" alt="경고" id="wrgimg" />
+				<font id="wrgmsg">키보드, 마우스로 날짜선택</font>
+			</span>
+		</td>
+	</tr>
+	</tfoot>
+	<tbody>
+	<tr>
+		<td class="sun ${stylesun}"><button type="button">${datesun}</button></td>
+		<td class="${stylemon}"><button type="button">${datemon}</button></td>
+		<td class="${styletue}"><button type="button">${datetue}</button></td>
+		<td class="${stylewed}"><button type="button">${datewed}</button></td>
+		<td class="${stylethu}"><button type="button">${datethu}</button></td>
+		<td class="${stylefri}"><button type="button">${datefri}</button></td>
+		<td class="sat ${stylesat}"><button type="button">${datesat}</button></td>
+	</tr>
+	</tbody>
+	</table>
+
+</body>
+</html>

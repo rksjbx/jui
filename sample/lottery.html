@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="nationality" content="korean" />
+<meta name="language" content="ko" />
+<meta name="content-language" content="kr" />
+<title>복권</title>
+<style>
+html,body {height:100%}
+body {margin:0; padding:0; font-family:"돋움", "굴림", Arial, sans-serif, verdana, AppleGothic; font-size:12px; color:#333}
+* {margin:0; padding:0;}
+select, textarea {border:1px solid #B7B6B6; background:#FFF; vertical-align:middle; font-size:1em}
+strong,b {font-weight:bold}
+img, fieldset {border:0}
+select, input, li img, span#location img,td *,fieldset * {vertical-align:middle}
+ul, li, ol {list-style-type : none}
+hr {display:none}
+a {color:#666; text-decoration:none}
+a:hover{text-decoration:none}
+a:link, a:visited, a:active, a:hover {color:#444}
+td * {vertical-align:middle}
+table {width:600px;border:none; border-spacing:0; color:#666; background: url("img/bottom_left.gif") bottom left no-repeat}
+table th {padding-left:10px; background:#eee}
+table td {padding:5px}
+table td input {border:1px solid #e2e2e2}
+table th,table td {height:30px; border:none; border-bottom:1px solid #e2e2e2; text-align:left}
+</style>
+<script type="text/javascript" src="/jui/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/jui/jQuery.fn.jui.js"></script>
+<script type="text/javascript" src="/jui/jQuery.fn.jui.lottery.js"></script>
+</head>
+<body>
+<!--
+<< .lottery() >> -----------------------------------------------------------------------------------
+복권	: jQuery jQuery.lottery(settings)
+
+		'ready'				: settings.ready || blankFnc,
+		'start'				: settings.start || blankFnc,
+		'mouseOver'			: settings.mouseOver || blankFnc,
+		'complete'			: settings.complete || blankFnc
+<< .lottery settings Infomation >> -----------------------------------------------------------------
+	@option backgroundImage
+		- Type		: String
+		- Default	: this.css('background-image')
+		- Comment	: [옵션] 전경이미지를 지정한다.
+
+	@option cellWidth
+		- Type		: Number
+		- Default	: 20
+		- Comment	: [옵션] 전경이미지 셀의 가로폭을 지정한다.
+
+	@option cellHeight
+		- Type		: Number
+		- Default	: 20
+		- Comment	: [옵션] 전경이미지 셀의 세로폭을 지정한다.
+
+	@option transparentRate
+		- Type		: Number
+		- Default	: 0.3
+		- Comment	: [옵션] 셀에 마우스가 오버될때 가해지는 투명도를 지정한다.
+
+	@option ready
+		- Type		: boolean function (settings)
+		- Default	: function () {}
+		- Comment	: [옵션] 복권이 로드되기 전에 호출된다. true를 반환하면 복권은 중지된다.
+						(params) settings	> 초기 옵션
+
+	@option start
+		- Type		: boolean function (settings, jQuery)
+		- Default	: function () {}
+		- Comment	: [옵션] 최초에 셀에 마우스가 오버될때 호출된다. true를 반환하면 복권은 중지된다.
+						(params) settings	> 초기 옵션
+						(params) jQuery		> event가 발생한 jQuery노드
+
+	@option event
+		- Type		: boolean function (settings, jQuery)
+		- Default	: function () {}
+		- Comment	: [옵션] 셀에 마우스가 오버될때 매번 호출된다. true를 반환하면 복권은 중지된다.
+						(params) settings	> 초기 옵션
+						(params) jQuery		> event가 발생한 jQuery노드
+
+	@option complete
+		- Type		: boolean function (settings)
+		- Default	: function () {}
+		- Comment	: [옵션] 복권이 로드된 직후에 호출된다. true를 반환하면 복권은 중지된다.
+						(params) settings	> 초기 옵션
+
+-->
+<strong>기본값 사용 예제</strong>
+<div class="lottery1" style="width:80px; height:80px; background-image:url(lottery/lottery.gif)"></div>
+<script type="text/javascript">
+<!--
+// 기본값 사용 예제
+$(function () {
+	$('.lottery1').jui('lottery');
+});
+//-->
+</script>
+<br />
+<br />
+<br />
+<strong>콜백함수 사용 예제</strong>
+<div class="lottery2" style="width:80px; height:80px"></div>
+
+<script type="text/javascript">
+<!--
+// 옵션 사용 예제
+$(function () {
+	// 결과배열
+	var result	= ['니미 꽝인듯', '님좀 운조은듯'];
+
+	$('.lottery2').jui('lottery', {
+		imageUrl		: 'lottery/lottery.gif',	// 전경 이미지
+		cellWidth		: 35,						// 셀 가로폭 35px
+		cellHeight		: 35,						// 셀 세로폭 35px
+		transparentRate	: 0.5,						// 투명도 50% 씩 증가
+		start	: function (settings, liNode) {
+			var txt	= result[Math.floor(Math.random()*result.length)];
+			this.append('<p>'+txt+'</p>');
+		}
+	});
+});
+//-->
+</script>
+</body>
+</html>

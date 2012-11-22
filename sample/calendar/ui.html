@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="nationality" content="korean" />
+<meta name="language" content="ko" />
+<meta name="content-language" content="kr" />
+<title>jQuery-jui-calendar v1.0</title>
+<link rel="stylesheet" href="css/ui.css" type="text/css">
+</head>
+<body>
+<div>
+	<div class="caption">
+		<span class="year">
+			<input type="text" id="year" maxlength="4" value="0" title="년도 입력폼" />
+			<button type="button" class="nexty">1년 뒤로</button>
+			<button type="button" class="prevy">1년 앞으로</button>
+			<label for="year">년</label>
+		</span>
+		<span class="month">
+			<input type="text" id="month" maxlength="2" value="0" title="월 입력폼" />
+			<button type="button" class="nextm">다음 달</button>
+			<button type="button" class="prevm">이전 달</button>
+			<label for="month">월</label>
+		</span>
+		<button type="button" class="today">오늘</button>
+	</div>
+	<table cellspacing="0" cellpadding="0" border="1" summary="키보드 상/하 버튼, 마우스 휠 동작등을 활용하여 신속하고 편리하게 날짜를 선택하실 수 있습니다.">
+	<caption id="caption">#{YYYY}년 #{M}월 #{D}일</caption>
+	<colgroup>
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+		<col width="24px" />
+	</colgroup>
+	<thead>
+	<tr>
+		<th scope="col" class="sun">일</th>
+		<th scope="col">월</th>
+		<th scope="col">화</th>
+		<th scope="col">수</th>
+		<th scope="col">목</th>
+		<th scope="col">금</th>
+		<th scope="col" class="sat">토</th>
+	</tr>
+	</thead>
+	<tfoot>
+	<tr>
+		<td colspan="7">
+			<span>
+				<button class="clear" type="button">삭제</button>
+				<img src="img/ico_notice.gif" alt="경고" id="wrgimg" />
+				<font id="wrgmsg">키보드, 마우스로 날짜선택</font>
+			</span>
+		</td>
+	</tr>
+	</tfoot>
+	<tbody>
+	<tr>
+		<td class="sun"><button type="button">#{sun}</button></td>
+		<td><button type="button">#{mon}</button></td>
+		<td><button type="button">#{tue}</button></td>
+		<td><button type="button">#{wed}</button></td>
+		<td><button type="button">#{thu}</button></td>
+		<td><button type="button">#{fri}</button></td>
+		<td class="sat"><button type="button">#{sat}</button></td>
+	</tr>
+	</tbody>
+	</table>
+
+	<button type="button" class="close">닫기</button>
+	<!--
+	<p><img src="img/comment_arrow.gif" alt="" /><span>마우스 휠 또는 키보드 상/하 버튼을 사용하여 연도와 월을 선택할 수 있습니다.</span></p>
+	-->
+<div>
+</body>
+</html>
