@@ -8,8 +8,8 @@ var calendar	= $.fn[ns].calendar = function (settings) {
 
 	return this;
 };
-
-// 6ÁÖÄ¡ ³¯Â¥ ¸ÅÆ®¸¯½º ¹ÝÈ¯
+// í•œê¸€
+// 6ï¿½ï¿½Ä¡ ï¿½ï¿½Â¥ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 calendar.getDateMatrix	= function (year, month, date) {
 	var oDate	= arguments.length == 3 ? new Date(year, month-1, date) : new Date(),
 		matrix	= [];
