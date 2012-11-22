@@ -3,7 +3,7 @@
 
 (function ($) {
 
-// JUIÀÇ namespace¸¦ ÁöÁ¤ÇÑ´Ù.
+// JUIì˜ namespaceë¥¼ ì§€ì •í•œë‹¤.
 var ns	= 'jui';
 
 
