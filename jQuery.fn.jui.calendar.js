@@ -8,8 +8,8 @@ var calendar	= $.fn[ns].calendar = function (settings) {
 
 	return this;
 };
-// 한글
-// 6��ġ ��¥ ��Ʈ���� ��ȯ
+
+// 6주치 날짜 매트릭스를 반환한다.
 calendar.getDateMatrix	= function (year, month, date) {
 	var oDate	= arguments.length == 3 ? new Date(year, month-1, date) : new Date(),
 		matrix	= [];
