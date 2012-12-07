@@ -25,8 +25,8 @@ th.sat {color:#9ebeff}
 td.sun button {color:#d44757}
 td.sat button {color:#69f}
 td.holi button {color:#d44757 !important}
-td.prevsun button,td.nextsun button,td.prevholi button,td.nextholi button {color:#de9fa8 !important}
-td.prevsat button,td.nextsat button {color:#9ebeff !important}
+td.prev.sun button,td.next.sun button,td.prev.holi button,td.next.holi button {color:#de9fa8 !important}
+td.prev.sat button,td.next.sat button {color:#9ebeff !important}
 td.today button {color:#7e39cc; font-size:10px; font-weight:bold; font-style: italic}
 table td button {float:left; width:24px; height:19px; text-indent:0; font-family:Arial, sans-serif, verdana, AppleGothic}
 tbody td.prev,tbody td.next {background: url("../img/cell_bg.gif") left no-repeat}

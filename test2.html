@@ -1,6 +1,3562 @@
-<html>
-<head></head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+
+
+<title>채용정보-특성화고검색</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="p3p" content='CP="CAO DSP AND SO " policyref="/w3c/p3p.xml"' />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="robots" content="index,follow" />
+<meta name="subject" content="#" />
+<meta name="author" content="#" />
+<meta name="keywords" content="#" />
+<meta name="selected-menu" content="0, 7, 0, 0" />
+<base href="http://www.work.go.kr/" />
+<link rel="stylesheet" href="/css/default.css" type="text/css" />
+<link rel="stylesheet" href="/css/layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/board.css" type="text/css" />
+<link rel="stylesheet" href="/css/content.css" type="text/css" />
+<link rel="stylesheet" href="/css/quick.css" type="text/css" />
+<link rel="stylesheet" href="/css/jobyoung/jobyoung.css" type="text/css" />
+<style type="text/css">
+/* <![CDATA[ */
+/* board.css */table th, td {word-break:break-all}.search_form tbody td input,#layer div.category label input {*position:relative; *top:-1px}dd input {*margin-right:-3px}dd img {*top:1px;}span.tab_menu {*zoom:1}span.tab_menu02 {*zoom:1}#content .search_form tbody td.source label {_background-position:16px 0;}	.search_form tr.content td div.notice li {*zoom:1;}	.search_form tbody td.cnt_byte div {*zoom:1;}.search_form tbody.penal td ul li input {*top:-5px; *left:-5px;}	.search_form tbody td p.check,.search_form tbody td ul.check {*zoom:1;}.search_list tbody.formCo td .coinfo {_height:100%; *min-height:100%;}.search_detail caption.personal_title, x:-moz-any-link, x:default {height:38px; padding:12px 0 0 10px;}table.sch_table tbody td p span {*padding-bottom:3px}.search_contol span.range a.btn img {_margin-top:0px;}.search_contol02 span.range a.btn img {_margin-top:0px;}fieldset.search_penal dl {*zoom:1}fieldset.search_penal p {*zoom:1}fieldset.search_penal02 .penalin {*padding:10px 0 11px 15px; *zoom:1}fieldset.search_penal02 .penalin dl.othercase img {*margin-top:-1px;}span.file_btn strong input {-ms-filter:alpha(opacity=0);filter:alpha(opacity=0);opacity:0;-moz-opacity:0;}@media screen and (-webkit-min-device-pixel-ratio:0){	.search_form tbody td input {position:relative; top:-1px; vertical-align:middle};}/* content.css */.comment {_display:inline-block;}#content ul.list_type li {_position:relative;}ol.decimal li {*margin:0 0 0 25px;}.graybox dl.coun {*zoom:1;}.graybox.chek {_height:60px; _width:660px;}@media screen and (-webkit-min-device-pixel-ratio:0){	#main #content .emplist .samejob {background-position:left 42px;};}/* layout.css */#container {*zoom:1;}#header div.global span.user {*margin-top:-3px;}#header div.global dl {*margin-top:3px;}#header div.global dl dd {*padding:0 10px 0 7px; *background:url(/images/common/layout/bar_gray.gif) no-repeat scroll right 3px;}#header #tobmenu .moz {*margin-top:0;}#header #tobmenu .myinfo div, x:-moz-any-link, x:default {position:absolute; left:5px; top:-25px;}#header #tobmenu .myinfo div {*top:-26px;}#header #tobmenu .specmenu ul {*zoom:1;}#sidebar ul li ul li ul {*zoom:1;}#sidebar div.banner_empcenter ul.sercenter {*margin-top:14px; _margin-top:12px;}#sidebar div.banner_empcenter ul.sercenter li ul {*top:31px; _top:32px;}#sidebar div.banner_empcenter p {_bottom:10px; _right:9px;}#footer #footin span.family input,#footer #footin span.family img {*margin-top:-5px; _margin-top:-7px;}span#location img, x:-moz-any-link, x:default {position:relative; top:1px}@media screen and (-webkit-min-device-pixel-ratio:0){	#content span#location img {position:relative; top:1px;};}
+/* ]]> */
+</style>
+
+<script type="text/javascript" src="/js/framework/keis.import.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/worknet.common.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/worknet.checkForm.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/worknet.popup.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/worknet.indivMemberSrv.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/worknet.member.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/makePCookie.js" charset="utf-8"></script>
+<script type="text/javascript" defer="defer">
+//<![CDATA[ 
+//json 형태의 object debugging func(홍세기 seigi_h@naver.com)
+function viewProp() {
+	var allHtml = "";
+
+	for (var x = 0 ; x < arguments.length ; x++) {
+		var obj = arguments[x];
+
+		var names = "<table border='1' cellspacing='1' cellpadding='1'><tr>";
+		if (obj.toString().substr(0,8) === '[object ') {
+			names += "<td>name</td><td>value</td></tr>";
+			var arr = new Array();
+			for (var name in obj) {
+				arr.push(name);
+			}
+			arr.sort();
+			for (var i = 0 ; i < arr.length ; i++) {
+				var key = arr[i];
+				names += "<tr><td>";
+				names += key;
+				names +='</td><td>' ;
+				names += obj[key];
+				names += '</td></tr>';
+			}
+			names += "</table>";
+			arr = null;
+		} else {
+			names += "<td>value</td></tr>";
+			names += "<tr><td>";
+			names += obj;
+			names += '</td></tr>';
+		}
+		allHtml += names + "<br/>";
+	}
+	
+	var pop = window.open("", "viewProperty", "", "");
+	pop.focus();
+	pop.document.body.innerHTML = allHtml.fixed();
+	
+}
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+// wondow.onload 시에 액션 메세지를 경고창으로 나타낸다
+latte.observer.add(window, 'load', function (evt) { var msg = ''; if (msg) alert(msg); });
+latte.observer.add(window, 'load', function () {
+	worknet.common.worknetSetReadOnly();
+	var menuInitLst	= eval('['+latte.getMetaValue('selected-menu')+']');
+
+	menuInitLst.shift();
+	var leftMenu	= new latte.ui.navi.TreeMenu({
+		'onInitLst'		: menuInitLst,
+		'onClassLst'	: ['active','active','active','active'],
+		'extEvtLst'		: false,
+		'onEvtLst'		: false,
+		'menuQstrs'		: ['#sidebar > ul > li', 'ul > li', 'ul > li']
+	});
+});
+//]]>
+</script>
+
+
+</head>
 <body>
-<img src="" alt="haha" longdesc="test2.html" />
+<div id="wrap">
+
+
+<div id="skipNavigation" title="스킵내비게이션">
+	<a href="#content">본문내용 바로가기</a>
+	<a href="#footer">하단메뉴 가기</a>
+</div>
+
+<div id="header">
+
+
+
+
+
+
+
+
+
+
+
+<div class="hjobs">
+	<div class="headwrap">
+	<div class="tarea">
+		<h1><a href="http://www.work.go.kr:80/index.jsp"><img src="/images/common/layout/logo.gif" alt="워크넷 메인 - 대한민국 모든 일자리 정보" /></a>
+		<sub><a href="http://www.work.go.kr:80/seekMain.do"><img src="/images/common/layout/tit_seek.gif" alt="구직" /></a></sub></h1>
+	
+
+
+
+
+
+
+
+	<div class="global">
+		<span class="user">
+		
+		
+			<a href="http://www.work.go.kr:80/member/bodyLogin.do?redirectUrl=/seekMain.do"><img src="/images/common/layout/btn_login.gif" alt="로그인" /></a><a href="http://www.work.go.kr:80/member/custJoin/retrieveCustJoinTp.do"><img src="/images/common/layout/btn_join.gif" alt="회원가입" /></a>
+		
+		
+		
+		</span>
+				
+		<dl>
+			<dt>고객메뉴</dt>
+			<dd><a href="http://www.work.go.kr:80/alba/main.do"><img src="/images/common/layout/hd_alba.gif" alt="알바" /></a></dd>
+			<dd><a href="http://www.work.go.kr:80/useInfo/worknetInfo/useWorknetIndiv.do"><img src="/images/common/layout/hd_guide.gif" alt="이용안내" /></a></dd>
+			<dd><a href="http://www.work.go.kr:80/custCenter/custCtrMain.do"><img src="/images/common/layout/hd_cscenter.gif" alt="워크넷 고객센터" /></a></dd>
+			<dd><a href="http://113366.com/keis" target="_blank"><img src="/images/common/layout/hd_remote.gif" alt="원격제어" /></a></dd>
+			<dd><a href="http://www.work.go.kr:80/useInvite/worknetHomepgInvite/sitemap.do"><img src="/images/common/layout/hd_sitemap.gif" alt="사이트맵" /></a></dd>
+		</dl>
+		<span class="fontsize">
+			<img src="/images/common/layout/hd_fontsize.gif" alt="글자크기" />
+			<a href="#increaseFont" class="increaseFont"><img src="/images/common/layout/zoomin.gif" alt="글자 확대" /></a>
+			<a href="#resetFont" class="resetFont"><img src="/images/common/layout/zoomreset.gif" alt="원사이즈" /></a>
+			<a href="#decreaseFont" class="decreaseFont"><img src="/images/common/layout/zoomout.gif" alt="글자 축소" /></a>
+		</span>
+
+		<script type="text/javascript" src="/js/zoom.js" charset="utf-8"></script>
+		<noscript><p style="position:absolute; top:30px; right:180px; width:350px; color:#be3434; border:2px solid #be3434; z-index:5">스크립트를 지원하지 못하는 환경입니다. 브라우저내의 화면 확대 기능을 사용바랍니다. (단축키 : ctrl 누른 후 +/- 키)</p></noscript>
+		<a href="http://www.work.go.kr:80/useInvite/worknetHomepgInvite/mobileWorknet.do"><img src="/images/common/layout/hd_mobile.gif" alt="모바일 워크넷" /></a>
+		
+		<a href="http://www.worktogether.or.kr/main.do?JGWTOKEN=" target="_blank"><img src="/images/common/layout/logo_worktogether.gif" alt="worktogether" /></a>
+	</div>
+
+
+	<form id="searchFrm" name="searchFrm" method="post" action="/wnSearch/unifSrch.do">
+	<fieldset>
+		<legend>통합검색</legend>
+			<label for="topQuery"><img src="/images/common/layout/tit_ttSrch.gif" alt="통합검색" /></label>
+			<input type="text" id="topQuery" name="topQuery" />
+			<input type="image" src="/images/common/layout/btn_search.gif" alt="검색" />
+	</fieldset>
+	</form>
+	</div>
+	
+
+
+
+<div id="tobmenu">
+	<ul>
+		<li style="width:238px;">
+									   
+			<a href="http://www.work.go.kr:80/empInfo/empInfoSrch/list/dtlEmpSrchList.do?seniorLayoutYn=N"><img src="/images/common/layout/cnavi01_off.gif" alt="채용정보" /></a>
+			<ul>
+				<li><a href="http://www.work.go.kr:80/empInfo/empInfoSrch/list/retriveWorkRegionEmpIntroList.do?seniorLayoutYn=N"><img src="/images/common/layout/menu_place.gif" alt="근무지역별" /></a></li>
+				<li><a href="http://www.work.go.kr:80/empInfo/empInfoSrch/list/retriveJobsEmpIntroList.do?seniorLayoutYn=N"><img src="/images/common/layout/menu_jobseries.gif" alt="직종별" /></a></li>
+				<li>
+					<img class="new" alt="new" src="/images/common/layout/new.gif"/>
+					<a href="http://www.work.go.kr:80/empInfo/empInfoSrch/list/retriveSmallGiantEmpSrchMap.do"><img alt="강소기업" src="/images/common/layout/menu_kangso.gif"/></a>
+				</li>
+			</ul>
+		</li>
+
+		<li><a href="http://www.work.go.kr:80/empSpt/empGuide/resWriMthd/conception01.do"><img src="/images/common/layout/cnavi03_off.gif" alt="취업도우미" /></a></li>
+	</ul>
+	<ul class="right">
+	
+
+
+		
+		
+			<li>
+				<a href="#authDeny" onclick="javascript:alert('로그인후이용하세요');worknet.popup.popLogin({});return false;"><img src="/images/common/layout/com_myinfoadmin_off.gif" alt="내정보관리" /></a>
+			</li>
+		
+		
+		
+		
+		
+	
+	
+		<li><a href="#authDeny" onclick="javascript:alert('로그인 후 이용하세요');worknet.popup.popLogin({});"><img src="/images/common/layout/com_seekapply.gif" alt="구직신청" /></a></li>
+	
+	
+	
+	
+		<li class="specmenu"><a href="/jobyoung/main.do" target="_self"><img src="/images/common/layout/cnavi04_1_off.gif" alt="청년채용" /></a></li>
+		<li class="specmenu"><a href="/senior/main/main.do" id="seniorEmp"><img src="/images/common/layout/cnavi04_off.gif" alt="고령자메뉴" /></a>
+		<!-- 
+		<div id="oldp" style="display:none;">
+		<img src="/images/common/layout/gnb_arrow.gif" alt="선택" class="gnbsel" />
+			<ul>
+				<li>채용정보
+					<ul>
+						<li><a href="/empInfo/empInfoSrch/list/retrivePfEmpMainList.do?pageCode=B">고령자 채용우대 검색</a></li>
+						<li><a href="/empInfo/empInfoSrch/list/dtlEmpMainList.do">채용정보검색</a></li>
+					</ul>
+				</li>
+				<li>사회공헌일자리
+					<ul>
+						<li><a href="/senior/socContribute/socContributeGuide.do">프로그램 소개</a></li>
+						<li><a href="/senior/socContribute/socContributeApplyList.do">프로그램 참여신청하기</a></li>
+					</ul>
+				</li>
+				<li class="part3">취업지원프로그램
+					<ul>
+						<li><a href="/empSpt/empSptPgm/oldReemp/intro.do">성실프로그램</a></li>
+					</ul>
+				</li>
+				<li>공지/뉴스/자료
+					<ul>
+						<li><a href="/ntNewsData/ntMatter/retrieveNtMatterList.do">공지사항</a></li>
+						<li><a href="/ntNewsData/empNews/retrieveEmpNewsList.do">고용뉴스</a></li>
+						<li><a href="/ntNewsData/empEvent/retrieveEmpEventList.do">채용행사</a></li>
+					</ul>
+				</li>
+				<li>직업심리검사
+					<ul>
+						<li><a href="/consltJobCarpa/jobPsyExam/aduOldDetail.do">준고령자 직업선호도검사</a></li>
+					</ul>
+				</li>
+				<li class="part3">내정보관리
+					
+					
+					<ul>
+						<li><a href="#authDeny" onclick="javascript:alert('로그인후이용하세요');return false">회원정보 관리</a></li>
+						<li><a href="#authDeny" onclick="javascript:alert('로그인후이용하세요');return false">이력서 관리</a></li>
+					</ul>
+					
+					
+					
+					
+				</li>
+			</ul>
+			<p id="seniorZoom"><a href="#oldp"><img src="/images/common/layout/gnb_zoom.gif" alt="크게보기" /></a></p>
+			<span><a href="#oldp" id="close-seniorEmp"><img src="/images/common/btn/btn_close02.gif" alt="닫기" /></a></span>
+		</div>	 -->
+		</li>
+		<li class="moz"><a href="/wantedMain.do"><img src="/images/common/layout/com_employer.gif" alt="구인" /></a></li>
+		<li class="moz"><a href="/jobMain.do"><img src="/images/common/layout/com_jobinfo.gif" alt="직업&middot;진로" /></a></li>
+	</ul>
+</div>
+<script type="text/javascript">gNavi();</script>
+	</div>
+</div>
+
+</div>
+<hr/>
+
+<div id="container"  >
+<div id="sidebar">
+
+
+
+
+<script type="text/javascript" src="/js/framework/keis.window.js" charset='utf-8'></script>
+
+<!-- 고령자용 레프트 메뉴 -->
+
+
+<!-- 고령자 외 공통 레프트 메뉴 -->
+
+<h3><img src="/images/common/layout/tit_jobyoung.gif" alt="청년" /></h3>
+
+<div class="youngman">
+<ul>
+	<li><a href="/jobyoung/empSrch/retriveSmallGiantEmpSrchMap.do">강소기업 채용정보</a></li>
+	<li><a href="http://sminfo.smba.go.kr/gc/ei/GEI001R0.do?cmMenuId=441010100" onclick="keis.window.openPopup('http://sminfo.smba.go.kr/gc/ei/GEI001R0.do?cmMenuId=441010100',1000,800,{scrollbars : true});return false;">우수중소기업DB</a></li>
+	<li><a href="/jobyoung/coInfo/happyFirCoList.do">행복지수 1등기업</a></li>
+	<li><a href="/jobyoung/coInfo/smallCoSpecialEmpList.do">중소기업 특별채용관</a></li>
+	<li><a href="/jobyoung/coInfo/youngGoodCoList.do">청년, 좋은기업을 만나다</a></li>
+</ul>
+</div>
+
+<ul>
+
+	
+		
+		
+			<li ><a href="/jobyoung/empSrch/empSrchList.do" target="_self">채용정보검색</a></li>
+		
+		
+	
+
+	
+		
+		
+		
+			<li ><a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpIntroList.do" target="_self">근무지역별</a>
+			
+				<ul>
+				
+					
+					
+						<li><ul>
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=11000" target="_self">서울</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=26000" target="_self">부산</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=28000" target="_self">인천</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=27000" target="_self">대구</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=30000" target="_self">대전</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=29000" target="_self">광주</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=31000" target="_self">울산</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=36110" target="_self">세종</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=41000" target="_self">경기</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=44000" target="_self">충남</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=43000" target="_self">충북</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=48000" target="_self">경남</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=47000" target="_self">경북</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=46000" target="_self">전남</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=45000" target="_self">전북</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=42000" target="_self">강원</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/workRegionEmpCodeList.do?selRegion=50000" target="_self">제주</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						</ul></li>
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveStaAreaIntroView.do" target="_self">역세권별</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				</ul></li>
+			
+		
+	
+
+	
+		
+		
+			<li ><a href="/jobyoung/empSrch/retriveJobsEmpIntroList.do" target="_self">직종별</a></li>
+		
+		
+	
+
+	
+		
+		
+		
+			<li ><a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveEnterEmpMainList.do?pageCode=all" target="_self">기업형태별</a>
+			
+				<ul>
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveSmallGiantEmpSrchMap.do" target="_self">강소기업</a>
+										<!-- 강소기업일경우 -->
+										<img alt="new" src="/images/common/ico/ico_new02.gif"/>
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveEnterEmpMainList.do?pageCode=01" target="_self">대기업</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveEnterEmpMainList.do?pageCode=04" target="_self">공기업/공공기관</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveEnterEmpMainList.do?pageCode=05" target="_self">외국계기업</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveEnterEmpMainList.do?pageCode=03" target="_self">벤처기업</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				</ul></li>
+			
+		
+	
+
+	
+		
+		
+			<li ><a href="/jobyoung/empSrch/retriveListedMainList.do?pageCode=all" target="_self">상장여부별</a></li>
+		
+		
+	
+
+	
+		
+		
+			<li ><a href="/jobyoung/empSrch/retriveJobScaleSearchList.do" target="_self">기업규모별</a></li>
+		
+		
+	
+
+	
+		
+		
+		
+			<li ><a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveJobEmploySearchList.do" target="_self">조건별</a>
+			
+				<ul>
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveJobEmploySearchList.do" target="_self">고용형태별</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retrivePreferentialSearchList.do" target="_self">우대조건별</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveSalEmpMainList.do" target="_self">급여별</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveWelfareEmpMainList.do" target="_self">복리후생별</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				
+			
+				
+				
+					
+					
+						
+							
+								
+								
+									<li >
+										<a href="http://www.work.go.kr:80/jobyoung/empSrch/retriveMilitaryMainList.do" target="_self">병역특례기업</a>
+										<!-- 강소기업일경우 -->
+										
+									</li>
+								
+							
+						
+					
+				
+				</ul></li>
+			
+		
+	
+
+	
+		
+		
+			<li ><a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do" target="_self">특성화고열린채용관</a></li>
+		
+		
+	
+
+	
+		
+		
+			<li ><a href="/jobyoung/community/talk.do" target="_self">이야기</a></li>
+		
+		
+	
+
+	
+		
+		
+			<li ><a href="/jobyoung/community/resumePhotoModifyList.do" target="_self">이력서 사진수정</a></li>
+		
+		
+	
+
+</ul>
+
+
+
+
+
+	<div class="banp">
+		
+		
+		
+			
+		
+			
+			
+			
+				<p><a href="/intern/emp/wantedList.do" class="end" target="_blank" title="새창"><img src="/framework/filedownload/getImage.do?filePathName=g2%2BIRdDOZo7fgCLNx0lRkzDGkIdz%2FhJlBeqrR8AraOkNnVzDUe0PjY%2BIggitCTIN" alt="청년인턴 채용정보"/></a></p>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	</div>
+
+
+
+
+</div>
+<hr/>
+<div id="content">
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/framework/keis.import.js" charset="utf-8"></script>
+<script src="/js/worknet.common.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/worknet.search.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javaScript">
+//<![CDATA[
+
+    window.onload = function () {
+
+		worknet.common.bindCalendar('#{YYYY}#{MM}#{DD}');
+
+    	if (typeof SearchEngine == "undefined") {SearchEngine = {};}
+    	SearchEngine.today    = '20121128';
+    	SearchEngine.month    = '20121029';
+    	SearchEngine.twoweek  = '20121115';
+    	SearchEngine.week     = '20121122';
+    	SearchEngine.threeDay = '20121126';
+    };
+
+	function goSubmit(){
+
+		/* #########공통 검색폼 체크 시작#######*/
+		if(psnSrchCheck() == false){
+			return false;
+		}
+		/* #########공통 검색폼 체크 끝#########*/
+		document.mForm.action = "/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do";
+		document.mForm.target = "_self";
+		return true;
+	}
+
+//]]>
+</script>
+<form id="searchCondExtVO" name="mForm" action="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do" method="post" onsubmit="return goSubmit();">
+<input type="radio" style="display:none" id="payGbn0" name="payGbn" value="noPay" checked="checked" />
+<p class="visual_img"><img src="/images/jobyoung/empSrch/visual_specialHigh.jpg" alt="실력으로 인정받는 사회, 특성화고를 위해 열린채용관이 함께합니다." /></p>
+
+<ul class="tab_menu">
+	<li class="emp on"><strong>채용정보</strong></li>
+	<li class="personal"><a href="/psnInfo/psnInfoSrch/specialHighSchoolDtlPsnSrch.do" style="outline-style:dotted">인재정보</a></li>
+</ul>
+
+<div class="specialHighSrch">
+	<div class="srchSpecialHigh">
+		<table summary="이 표는 근무지역, 직종, 경력, 우대조건, 등록기간, 기업유형, 검색키워드 항목의 특성화고 채용검색 조건 값을 입력합니다." class="search_form">
+		<caption>특성화고 채용검색</caption>
+		<colgroup>
+		<col width="19%" />
+		<col width="*" />
+		</colgroup>
+		<tbody>
+		<tr>
+			<th scope="row" class="base"><label for="regionNm">근무지역</label></th>
+			<td>
+				<input type="hidden" id="region" name="region" value="" />
+				<input type="text" class="typing2 readonly" id="regionNm" name="" title="근무지역"
+						value="" readonly="readonly"
+				 /><a href="/common/popup/PopRegionMultiSearchList.do?returnFunction=f_resultRegion" onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; worknet.popup.popRegionMultiSearch({
+						returnFunction:'f_resultRegion',
+						targetObjName:'#regionNm',
+						loc:{posRel:[-230, 10]}
+					});return false"><img class="ml-1" src="/images/common/btn/btn_area_find.gif" alt="지역찾기" /></a>
+				<a href="#regionNm" onclick="$('#regionNm').val('');$('#region').val('');return false"><img src="/images/common/btn/btn_eraser.gif" alt="지우기" /></a>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row" class="base"><label for="occupationNm">희망직종</label></th>
+			<td>
+				<input type="hidden" id="occupation" name="occupation" value="" />
+				<input type="text" class="typing2 readonly" id="occupationNm" name=""
+						value="" readonly="readonly"
+				/><a href="/common/popup/PopJobsMultiSearchList.do?returnFunction=f_resultJobsCodeSearch" onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; worknet.popup.popJobsMultiSearch({
+						returnFunction:'f_resultJobsCodeSearch',
+						targetObjName:'#occupationNm',
+						loc:{posRel:[-230, 10]}
+					});return false"><img class="ml-1" src="/images/common/btn/btn_job_find.gif" alt="직종찾기" /></a>
+				<a href="#occupationNm" onclick="$('#occupation').val('');$('#occupationNm').val('');return false"><img src="/images/common/btn/btn_eraser.gif" alt="지우기" /></a>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row"><label for="careerTypeZ">경력</label></th>
+			<td>
+				<label for="careerTypeZ"><input type="checkbox" id="careerTypeZ" name="careerTypes" value="Z"  />무관</label>
+				<label for="careerTypeN"><input type="checkbox" id="careerTypeN" name="careerTypes" value="N"  />신입</label>
+				<label for="careerTypeC" style="display:none"><input type="checkbox" id="careerTypeC" name="careerTypes" value="E"  onclick="careercheck();" />경력</label>
+				<label for="careerFrom" style="display:none">(<input type="text" class="typing" style="width:30px;" id="careerFrom" name="careerFrom" maxlength="3" onfocus="input_limit_string(this,'/d');" title="최초입사일" value="" disabled="disabled" /> 개월 ~</label>
+				<label for="careerTo" style="display:none"><input type="text" class="typing" style="width:30px;" id="careerTo" name="careerTo" maxlength="3" onfocus="input_limit_string(this,'/d');" title="마지막근무일" value="" disabled="disabled"/> 개월)</label>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row"><label for=""><img src="/images/jobyoung/empSrch/tit_penalty.gif" alt="우대조건" /></label></th>
+			<td>
+				<label for="supTy"><input type="checkbox" name="supTy" id="supTy" value="15" />특성화고/마이스터고</label>
+			</td>
+		</tr>
+		<tr class="content">
+			<th scope="row"><label for="regDateStdt">등록기간</label></th>
+			<td id="calTd">
+			<input type="text" name="regDateStdt" id="regDateStdt" class="typing calendar" style="width:80px;" readonly="readonly" title="최초등록일자" value="" />
+			 ~
+			<input type="text" name="regDateEndt" id="regDateEndt" class="typing calendar" style="width:80px;" readonly="readonly" title="만기일자" value="" />
+			<p>
+			<label for="termSearchGbn0"><input type="radio" id="termSearchGbn0" onclick="changeDate(this.id);" name="termSearchGbn" value="all" checked="checked" />전체</label>
+			
+			
+			<label for="termSearchGbn1"><input type="radio" onclick="changeDate(this.id);" id="termSearchGbn1" name="termSearchGbn" value="D-0" />오늘</label>
+			
+			
+			<label for="termSearchGbn2"><input type="radio" onclick="changeDate(this.id);" id="termSearchGbn2" name="termSearchGbn" value="D-3" />3일</label>
+			
+			
+			<label for="termSearchGbn3"><input type="radio" onclick="changeDate(this.id);" id="termSearchGbn3" name="termSearchGbn" value="W-1" />1주 이내</label>
+			
+			<br/>
+			<label for="termSearchGbn4"><input type="radio" onclick="changeDate(this.id);" id="termSearchGbn4" name="termSearchGbn" value="W-2" />2주 이내</label>
+			
+			
+			<label for="termSearchGbn5"><input type="radio" onclick="changeDate(this.id);" id="termSearchGbn5" name="termSearchGbn" value="M-1" />한달</label>
+			
+			</p>
+			</td>
+		</tr>
+		<tr class="content">
+			<th scope="row"><label for="enterPriseGbn1">기업형태별</label></th>
+			<td>
+				
+				
+				<label for="enterPriseGbn1"><input type="checkbox" id="enterPriseGbn1" name="enterPriseGbn" value="01"  />대기업</label>
+				
+				
+				<label for="enterPriseGbn2"><input type="checkbox" id="enterPriseGbn2" name="enterPriseGbn" value="04"  />공기업/공공기관</label>
+				
+				
+				<label for="enterPriseGbn3"><input type="checkbox" id="enterPriseGbn3" name="enterPriseGbn" value="02"  />우수중소기업</label>
+				
+				<br/>
+				<label for="enterPriseGbn4"><input type="checkbox" id="enterPriseGbn4" name="enterPriseGbn" value="05"  />외국계기업</label>
+				
+				
+				<label for="enterPriseGbn5"><input type="checkbox" id="enterPriseGbn5" name="enterPriseGbn" value="03"  />벤처기업</label>
+				
+				
+				<label for="enterPriseGbn6"><input type="checkbox" id="enterPriseGbn6" name="enterPriseGbn" value="06"  />코스피</label>
+				
+				
+				<label for="enterPriseGbn7"><input type="checkbox" id="enterPriseGbn7" name="enterPriseGbn" value="07"  />코스닥</label>
+				
+			</td>
+		</tr>
+		<tr>
+			<th scope="row" style="vertical-align:top; padding-top:3px;"><label for="keyword">검색키워드</label></th>
+			<td>
+			<input type="text" name="keyword" id="keyword" class="typing" style="width:200px;" maxlength="30" value=""/>
+			<p style="color:#ff6600;">&middot; 회사명, 직종, 지역, 구인등록번호 등 검색가능</p>
+			<input type="hidden" name="resultCnt" value="10" />
+			</td>
+		</tr>
+		</tbody>
+		</table>
+		<p style="text-align:center; margin-top:25px;"><input type="image" src="/images/jobyoung/common/btn/btn_srch.gif" alt="검색" /></p>
+	</div>
+	<div class="jobList">
+		<h3><img src="/images/jobyoung/empSrch/tit_job02.gif" alt="직종별" /></h3>
+		<ul>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=01&depth=2">관리자&middot;공학기술자</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=02&depth=2">경영&middot;사무&middot;금융&middot;보험</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=03&depth=2">교육&middot;연구&middot;법률</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=04&depth=2">의료&middot;보건&middot;사회복지</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=05&depth=2">문화&middot;예술&middot;방송&middot;디자인</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=06&depth=2">영업&middot;판매&middot;TM&middot;고객상담</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=07&depth=2">미용&middot;여행&middot;숙박&middot;오락&middot;스포츠</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=08&depth=2">무역&middot;물류&middot;운전&middot;운송</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=09&depth=2">건설&middot;건축&middot;토목&middot;환경&middot;에너지</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=10&depth=2">기계&middot;금속&middot;재료</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=11&depth=2">전기&middot;전자</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=12&depth=2">화학&middot;섬유&middot;식품</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=13&depth=2">IT&middot;정보통신&middot;웹</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=14&depth=2">인쇄&middot;목재&middot;공예&middot;농림어업</a></li>
+			<li><a href="/jobyoung/empSrch/retriveSpecialHighSchoolJobsCodeList.do?code=15&depth=2">생산직&middot;단순노무&middot;경비&middot;청소</a></li>
+		</ul>
+	</div>
+	<div class="regionList">
+		<h3><img src="/images/jobyoung/empSrch/tit_region02.gif" alt="지역별" /></h3>
+		<img src="/images/jobyoung/empSrch/regionMap.gif" alt="지역별" usemap="#AreaMap" />
+		<map name="AreaMap">
+			<area shape="poly" coords="109,11,140,61,119,74,90,64,77,22" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=42000" alt="강원">
+			<area shape="poly" coords="48,33,47,45,55,50,66,42,65,32" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=11000" alt="서울">
+			<area shape="poly" coords="47,53,73,53,82,63,70,81,46,78" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=41000" alt="경기">
+			<area shape="poly" coords="35,57,28,41,17,29,3,36,4,56" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=28000" alt="인천">
+			<area shape="poly" coords="81,78,103,81,88,116,71,104,69,86" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=43000" alt="충북">
+			<area shape="poly" coords="28,82,58,90,63,108,41,121,27,98" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=44000" alt="충남">
+			<area shape="poly" coords="57,125,79,124,76,111,64,111,53,118" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=30000" alt="대전">
+			<area shape="poly" coords="107,93,144,85,148,131,105,128" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=47000" alt="경북">
+			<area shape="rect" coords="113,132,132,146" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=27000" alt="대구">
+			<area shape="rect" coords="132,149,155,163" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=31000" alt="울산">
+			<area shape="rect" coords="122,165,147,187" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=26000" alt="부산">
+			<area shape="poly" coords="86,142,119,155,117,183,87,187,81,164" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=48000" alt="경남">
+			<area shape="poly" coords="42,131,74,137,74,160,36,154" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=45000" alt="전북">
+			<area shape="rect" coords="26,170,56,187" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=29000" alt="광주">
+			<area shape="poly" coords="25,189,69,186,69,205,25,219,18,206" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=46000" alt="전남">
+			<area shape="rect" coords="31,222,60,243" href="/jobyoung/empSrch/specialHighSchoolWorkRegionEmpCodeList.do?selRegion=50000" alt="제주">
+		</map>
+	</div>
+</div>
+</form>
+<div class="btn">
+	<a href="/coMemberSrv/wantedInfoAdmin/registerWantedAdminApplyForm.do"><img src="/images/jobyoung/common/btn/btn_empApply.gif" alt="채용공고 등록하기(구인신청)" /></a>
+</div>
+<br/><br/>
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/framework/keis.import.js" charset='utf-8'></script>
+
+
+<form id="subInfoForm" action="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" method="post">
+	<fieldset class="search_contol">
+		<legend>검색영역 우선순위 선택</legend>
+		
+		 	
+		
+		
+		<span class="matching">
+			<b>검색건수</b> : 총 
+			<strong>
+				
+				14,239
+			</strong>건
+		</span>
+		<span class="range">
+		<div class="sortOpt">
+			<button class="sortBtn">목록을 정렬하세요</button>
+			<!-- <button class="sortBtn" style="width:230px; height:19px; *height:21px; *padding-top:2px; padding-left:5px; cursor:pointer; background:#f5f5f5 url(/images/common/bullet/bul_sort.gif) right top no-repeat; border:1px solid #bebebe; font-size:11px; font-family:돋움, dotum; color:#656565; text-align:left;">목록을 정렬하세요</button> -->
+			<ul id="layerSortMethod">
+				<li><a href="#ASC" onclick="sortOption('ASC','comnm');">회사명(ㄱ→ㅎ)</a></li>
+				<li><a href="#DESC" onclick="sortOption('DESC','comnm');">회사명(ㅎ→ㄱ)</a></li>
+				<li><a href="#DESC" onclick="sortOption('DESC','mmSal');">임금높은순</a></li>
+				<li><a href="#ASC" onclick="sortOption('ASC','mmSal');">임금낮은순</a></li>
+				<li><a href="#DESC" onclick="sortOption('DESC','edu');">학력높은순</a></li>
+				<li><a href="#ASC" onclick="sortOption('ASC','edu');">학력낮은순</a></li>
+				<li><a href="#DESC" onclick="sortOption('DESC','careerSort');">경력많은순</a></li>
+				<li><a href="#ASC" onclick="sortOption('ASC','careerSort');">경력적은순</a></li>
+				<li><a href="#ASC" onclick="sortOption('ASC','receiptCloseDt');">마감일순(오늘~)</a></li>
+				<li><a href="#DESC" onclick="sortOption('DESC','receiptCloseDt');">마감일순(상시~)</a></li>
+				<li><a href="#DESC" onclick="sortOption('DESC','DATE');" class="selected">최근등록일순</a></li>
+				<li><a href="#ASC" onclick="sortOption('ASC','DATE');">예전등록일순</a></li>
+			</ul>
+		</div>		
+<script type="text/javaScript" language="javascript">
+//<![CDATA[ 
+//sort 레이어 옵션
+$layerSortMethod = $("#layerSortMethod");
+$layerSortMethodButton = $("button.sortBtn");
+$layerSortMethodButton.text('최근등록일순');
+
+$layerSortMethodButton.click(function() {
+	$layerSortMethod.toggle();
+	latte.css[latte.css.isContain($layerSortMethodButton.get(0), 'opened') ? 'removeClass' : 'addClass']($layerSortMethodButton.get(0), 'opened');
+	return false;
+});
+$layerSortMethod.find("a").click(function() {
+	$layerSortMethodButton.text($(this).text());
+	$layerSortMethod.hide();
+	latte.css[latte.css.isContain($layerSortMethodButton.get(0), 'opened') ? 'removeClass' : 'addClass']($layerSortMethodButton.get(0), 'opened');
+	$layerSortMethod.find("a").removeClass("selected"); // 선택된 옵션 클래스
+	$(this).addClass("selected");
+	return false;
+});
+
+// sort 파라미터 적용
+function sortOption(sortOrderBy,sortField){
+	window.location = '/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?sortField='+ sortField + '&sortOrderBy='+ sortOrderBy + '&serviceNm=jobyoung&len=0&tot=0&lastIndex=1&firstIndex=1&pageSize=10&recordCountPerPage=10&rowNo=0&softMatchingPossibleYn=N&charSet=EUC-KR&startPos=0&&collectionName=tb_workinfo&softMatchingMinRate=+66&softMatchingMaxRate=100&certifiYn=N&preferentialYn=N&siteClcd=WORK&openHighWork=Y&onlyTitleSrchYn=N&onlyContentSrchYn=N&resultCnt=10&pageIndex=1&pageUnit=10';
+/* 	document.getElementById('sortField').value = sortField;
+	document.getElementById('sortOrderBy').value = sortOrderBy;
+	
+	document.getElementById('searchCondExtVO').submit(); */ 
+}
+//]]>
+</script>
+			<select name="resultCnt" id="resultCnt" title="보기개수">
+				<option value="10" selected="selected">10개씩</option>
+				<option value="30" >30개씩</option>
+				<option value="50" >50개씩</option>
+			</select>
+			<input type="image" src="/images/common/btn/btn_view.gif" alt="보기" />
+		</span>
+	</fieldset>
+</form>
+
+<table summary="이 표는 회사명, 채용제목/임금/근무지역/근무형태, 학력/경력, 등록일, 마감일, 학력/경력, 마감일, 정보제공처, 보기 항목등의 채용 정보 목록을 제공합니다. 채용제목클릭시 상세페이지로 이동합니다." class="search_list">
+<caption>간편검색 채용정보 목록</caption>
+<colgroup>
+<col width="20%" />
+<col width="*" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+
+</colgroup>
+<thead>
+<tr>
+	<th scope="col">회사명/기업형태</th>
+	<th scope="col">채용제목/임금/근무지역</th>
+	<th scope="col">학력/경력</th>
+	<th scope="col">등록일</th>
+	<th scope="col">마감일</th>
+	<th scope="col">제공처</th>
+		
+</tr>
+</thead>
+<tbody class="form03">
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K150011211280041&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">주식회사이제이피</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="플랜트공학기술자(기계) 모집">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K150011211280041&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							플랜트공학기술자(기계) 모집
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K150011211280041&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K150011211280041" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+						
+							<img src='/images/common/ico/ico_payMonth.gif' alt='월급'/>
+						
+						
+						
+					
+					<strong>
+					
+						
+							200
+						
+						
+					
+					
+						
+						
+							만원
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="인천 남동구">
+			
+			
+			인천 남동구
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+					
+						<img src='/images/common/ico/ico_6day.gif' class="days" alt='주6일'/>
+					
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak0"></span>
+		
+			
+			
+				
+					
+					
+						학력무관							
+					
+				
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+					 채용시까지 <br/>(13-01-27)
+				
+				
+								
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K130231211280032&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">영진 FC</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="납품기사 구합니다">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K130231211280032&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							납품기사 구합니다
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K130231211280032&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K130231211280032" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+						
+							<img src='/images/common/ico/ico_payMonth.gif' alt='월급'/>
+						
+						
+						
+					
+					<strong>
+					
+						
+							175
+						
+						
+					
+					
+						
+						
+							만원
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="부산 북구">
+			
+			
+			부산 북구
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+					
+						<img src='/images/common/ico/ico_6day.gif' class="days" alt='주6일'/>
+					
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak1"></span>
+		
+			
+			
+				
+					
+					
+						학력무관							
+					
+				
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+					 채용시까지 <br/>(13-01-27)
+				
+				
+								
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K151151211280026&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">동명기업(주)</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="알곤용접원">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K151151211280026&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							알곤용접원
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K151151211280026&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K151151211280026" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+						
+							<img src='/images/common/ico/ico_payMonth.gif' alt='월급'/>
+						
+						
+						
+					
+					<strong>
+					
+						
+							180
+						
+						
+					
+					
+						
+						
+							만원
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="경기 화성시">
+			
+			
+			경기 화성시
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+					
+					
+						<img src='/images/common/ico/ico_week.gif' class="days" alt='격주휴무'/>
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak2"></span>
+		
+			
+			
+				
+					
+					
+						학력무관							
+					
+				
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+					 채용시까지 <br/>(13-01-27)
+				
+				
+								
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=KJAB001211280001&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">(주)에스텍에이스</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="[로뎀빌딜] 시설관리소장 모집">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=KJAB001211280001&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							[로뎀빌딜] 시설관리소장 모집
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=KJAB001211280001&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=KJAB001211280001" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+						
+							<img src='/images/common/ico/ico_payMonth.gif' alt='월급'/>
+						
+						
+						
+					
+					<strong>
+					
+						
+							210
+						
+						
+					
+					
+						
+						
+							만원
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="서울 강남구">
+			
+			
+			서울 강남구
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+					
+						<img src='/images/common/ico/ico_6day.gif' class="days" alt='주6일'/>
+					
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak3"></span>
+		
+			
+			
+			고졸
+			<br/>~ 대졸(4년)
+			
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+					 채용시까지 <br/>(13-01-21)
+				
+				
+								
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K120421211280018&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">(주)청인시에스비즈니스글로벌</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="홈플러스 컴퓨터 판매사원 모집">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K120421211280018&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							홈플러스 컴퓨터 판매사원 모집
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K120421211280018&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K120421211280018" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+						
+							<img src='/images/common/ico/ico_payMonth.gif' alt='월급'/>
+						
+						
+						
+					
+					<strong>
+					
+						
+							200
+						
+						
+					
+					
+						
+						
+							만원
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="대전 서구">
+			
+			
+			대전 서구
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+					
+					
+					
+						<img src='/images/common/ico/ico_etc.gif' class="days" alt='기타'/>
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak4"></span>
+		
+			
+			
+			고졸
+			<br/>~ 대졸(4년)
+			
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+				
+								
+				
+					12-12-02
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K130231211280030&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">성광볼트</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="냉간단조 보조원">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K130231211280030&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							냉간단조 보조원
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K130231211280030&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K130231211280030" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+						
+							<img src='/images/common/ico/ico_payMonth.gif' alt='월급'/>
+						
+						
+						
+					
+					<strong>
+					
+						
+							165
+						
+						
+					
+					
+						
+						
+							만원
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="부산 강서구">
+			
+			
+			부산 강서구
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+					
+					
+						<img src='/images/common/ico/ico_week.gif' class="days" alt='격주휴무'/>
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak5"></span>
+		
+			
+			
+				
+					
+					
+						학력무관							
+					
+				
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+				
+								
+				
+					12-12-10
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K151811211280087&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">유한회사태경</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="주류 유통 판매, 배송, 영업, 영업관리 사원 채...">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+					
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K151811211280087&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							주류 유통 판매, 배송, 영업, ...
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K151811211280087&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K151811211280087" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+							<img src='/images/common/ico/ico_payYear.gif' alt='연봉'/>
+						
+						
+						
+						
+					
+					<strong>
+					
+						
+						
+							2,000
+						
+					
+					
+						
+							만원
+						
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="경기 파주시">
+			
+			
+			경기 파주시
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+						<img src='/images/common/ico/ico_5day.gif' class="days" alt='주5일'/>
+					
+					
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak6"></span>
+		
+			
+			
+			고졸
+			<br/>~ 대졸(4년)
+			
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+					 채용시까지 <br/>(13-01-27)
+				
+				
+								
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K120611211280029&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">(주)일우아이티에스</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="금융사무기기 및 자동화기기 유지보수 요원 모집">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+					
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K120611211280029&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							금융사무기기 및 자동화기기 유지보...
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K120611211280029&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K120611211280029" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+							<img src='/images/common/ico/ico_payYear.gif' alt='연봉'/>
+						
+						
+						
+						
+					
+					<strong>
+					
+						
+						
+							2,000
+						
+					
+					
+						
+							만원
+						
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="서울 금천구">
+			
+			
+			서울 금천구
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+						<img src='/images/common/ico/ico_5day.gif' class="days" alt='주5일'/>
+					
+					
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak7"></span>
+		
+			
+			
+				
+					
+					
+						학력무관							
+					
+				
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+				
+								
+				
+					12-12-12
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K130231211280026&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">(주)대성시트</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="자동차부품관련 자재관리사무원">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K130231211280026&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							자동차부품관련 자재관리사무원
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K130231211280026&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K130231211280026" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+						
+							<img src='/images/common/ico/ico_payMonth.gif' alt='월급'/>
+						
+						
+						
+					
+					<strong>
+					
+						
+							176
+						
+						
+					
+					
+						
+						
+							만원
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="부산 사상구">
+			
+			
+			부산 사상구
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+						<img src='/images/common/ico/ico_5day.gif' class="days" alt='주5일'/>
+					
+					
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak8"></span>
+		
+			
+			
+				
+					
+					
+						고졸							
+					
+				
+			
+		
+	<br />
+	
+	
+	
+	신입		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+				
+								
+				
+					12-12-15
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+<tr>
+	<td class="title">
+		
+			
+				<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K151651211280007&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">챌린지어드벤처코리아(주)</a>
+			
+			
+			
+			
+			
+			
+			
+		<!-- 기업형태 -->
+		
+		
+	</td>
+	<td class="title">
+		<p class="link" title="테마파크 및 모험시설등 (짚라인) 디자인 담당자 ...">
+		<!-- 채용제목 -->
+		
+			
+				
+				
+					
+				
+				
+					
+						<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?callPage=detail&amp;wantedAuthNo=K151651211280007&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10">
+							테마파크 및 모험시설등 (짚라인)...
+						</a>
+					
+					
+					
+					
+					
+					
+									
+			
+			
+		
+
+	<!-- 보기(새창으로/요약보기) -->		
+			<span>
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/empDetailAuthView.do?newWindow=Y&amp;callPage=detail&amp;wantedAuthNo=K151651211280007&amp;rtnUrl=/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE&amp;pageIndex=1&amp;pageUnit=10" target="_blank">
+						<img src="/images/common/btn/btn_newWin02.gif" alt="새창으로" title="새창으로"/>
+					</a>
+				
+				
+				
+				
+				
+				
+				
+						
+			
+				
+					<a href="/empInfo/empInfoSrch/detail/popupLayer/retrievPreEmpInfoDetail.do?wantedAuthNo=K151651211280007" 
+					   onclick="try { latte.getEvent(event).stop(); } catch (ex) {}; latte.ui.open(this.href, '', [620, 300], {posRel:[-350,+9]}); return false;">
+					   <img src="/images/common/btn/btn_preview03.gif" alt="미리보기" title="미리보기"/>
+					</a>
+				
+				
+				
+				
+				
+							
+				
+			
+			</span>
+		</p>
+		<p>
+			
+			    
+					
+						
+							<img src='/images/common/ico/ico_payYear.gif' alt='연봉'/>
+						
+						
+						
+						
+					
+					<strong>
+					
+						
+						
+							2,000
+						
+					
+					
+						
+							만원
+						
+						
+						
+						
+					
+					</strong>
+				
+				
+				
+			
+			<!-- 근무지역 -->
+			
+			<span title="경기 하남시">
+			
+			
+			경기 하남시
+						
+			</span>
+			
+			<!-- 근무형태 -->
+							
+        		         	 
+					
+						<img src='/images/common/ico/ico_5day.gif' class="days" alt='주5일'/>
+					
+					
+					
+					
+				
+			
+		</p>
+	</td>
+	<td>
+	<span id="hak9"></span>
+		
+			
+			
+				
+					
+					
+						학력무관							
+					
+				
+			
+		
+	<br />
+	
+	
+	
+	경력무관		
+	</td>
+	<!-- 등록일 -->
+	<td>
+		12-11-28
+	</td>
+	<!-- 마감일 -->
+	<td>
+		
+				
+					 채용시까지 <br/>(13-01-27)
+				
+				
+								
+				
+		
+	</td>
+	<!-- 정보제공처 -->
+	<td>
+		
+			
+				<img src="/images/common/ico/ico_worknet.gif" alt="워크넷" />
+				<a href="#" class="writeSample" onmouseover="smpView(this.getElementsByTagName('img')[0],'certificationSample');return false" onmouseout="smpClosed('certificationSample')">
+					<img src="/images/common/ico/ico_cercification.gif" style="display:inline;" alt="인증" />
+				</a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</td>
+	<!-- 매칭률 -->
+		
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+<div class="paging">
+
+	
+	
+	
+	
+	
+	
+	
+<strong>1</strong>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=2&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">2</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=3&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">3</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=4&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">4</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=5&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">5</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=6&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">6</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=7&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">7</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=8&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">8</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=9&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">9</a>&nbsp;<a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=10&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+">10</a><a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=11&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+" class="next"><img src="/images/common/btn/btn_next.gif" alt="다음" /></a><a href="/jobyoung/empSrch/retriveSpecialHighSchoolSearchList.do?pageIndex=1424&amp;pageUnit=10&amp;serviceNm=jobyoung&amp;len=0&amp;tot=0&amp;lastIndex=1&amp;firstIndex=1&amp;pageSize=10&amp;recordCountPerPage=10&amp;rowNo=0&amp;softMatchingPossibleYn=N&amp;charSet=EUC-KR&amp;startPos=0&amp;collectionName=tb_workinfo&amp;softMatchingMinRate=+66&amp;softMatchingMaxRate=100&amp;certifiYn=N&amp;preferentialYn=N&amp;siteClcd=WORK&amp;openHighWork=Y&amp;onlyTitleSrchYn=N&amp;onlyContentSrchYn=N&amp;resultCnt=10&amp;sortOrderBy=DESC&amp;sortField=DATE
+" class="next_end"><img src="/images/common/btn/btn_next_end.gif" alt="마지막" /></a>
+</div>
+<p class="mt20"><img src="/images/empInfo/img_enterEmp.gif" alt="위 목록의 기업협태에서 대기업은 대기업, 공공은 공기업/공공기관, 우수는 우수중소기업, 외국은 외국계기업, 벤처는 벤처기업, 코스피는 코스피성장, 코스닥은 코스닥성장을 뜻합니다." /></p>
+
+
+<!-- 도움말 레이어 -->
+<div id="certificationSample" class="wrtSample">
+	<p><strong>워크넷 인증</strong></p>
+	<span><b>등록된 채용정보의 신뢰성</b>을 높이고 허위 정보로 인한 피해방지를 위하여 <b>취업알선기관 담당자의 확인 및 검토</b>를 거친 정보입니다.</span>
+	<a href="#" class="closed"><img src="/images/common/btn/btn_closed04.gif" alt="닫기"></a>
+	<span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span><span class="thisPoint"></span>
+</div>
+<!-- //도움말 레이어 -->
+
+</div>
+
+
+
+
+
+<script type="text/javascript"> 
+//<![CDATA[
+function quick() {
+	
+	// 이미지 높이
+	var imgHeight = 69;
+	
+	var quick = document.getElementById('quickwrap');
+	var list = document.getElementById('quicklist').getElementsByTagName('li').length;
+	var btn01 = document.getElementById('btn_up');
+	var btn02 = document.getElementById('btn_down');
+	var quickList = document.getElementById('quicklist');
+	var list = quickList.getElementsByTagName('li').length;
+	var listNum = (parseInt(list-3) * imgHeight);
+	var listNum02 = (parseInt(list) * imgHeight);
+	var box = new Qlist(quickList);
+	btn02.onclick = function() {
+		if ( box.xpos == -(listNum) || box.xpos <= -(listNum) || parseInt(quick.style.height) == listNum02 ) return false;
+		box.xpos = box.xpos - (parseInt(imgHeight) * 3);
+		box.qlist.style.top = box.xpos + 'px';
+		return false;
+	};
+	btn01.onclick = function() {
+		if ( box.xpos == 0 || box.xpos >= 0 || parseInt(quick.style.height) == listNum02 ) return false;
+		box.xpos = box.xpos + (parseInt(imgHeight) * 3);
+		box.qlist.style.top = box.xpos + 'px';
+		return false;
+	};
+	
+	// 나만의 맞춤메뉴 보이기 설정 (최초 로드 시 + 닫았다는 정보의 쿠키가 없을 경우)
+	if(-1 == document.cookie.indexOf("custMenuOpenYn=N")){
+		document.getElementById("more").style.display="block";
+		if(document.getElementById("more_off") != null){
+			document.getElementById("more_off").style.display="none";
+		}
+	}
+}
+function Qlist(qlist){
+	this.qlist = qlist;
+	this.qlist.style.top = '0';
+	Qlist.prototype.xpos = parseInt(this.qlist.style.top);
+}
+
+function showHide(id) {
+    var flashCtrl = document.getElementById('jobZoneMap');
+	
+	if(id == 'quicksetsel'){
+		
+		alert("로그인 후 사용가능합니다.");
+			
+			var win = window.open('/member/popup/login.do?reloadFormId=1','loginPop','top=100px, left=100px, height=420px, width=510px');
+			
+		return;
+		
+	}
+	
+	if(id.indexOf("off") == -1){ // 보이기설정
+		document.getElementById(id).style.display="block";
+		if(flashCtrl != null){
+			flashCtrl.getElementsByTagName('object')[0].style.visibility="hidden";
+		}
+
+		if(document.getElementById(id+"_off") != null){
+			document.getElementById(id+"_off").style.display="none";
+		}
+	}else{ // 닫기설정
+		if(id.indexOf("_") != -1){
+			document.getElementById(id.replace("_off","")).style.display="none";
+			if(flashCtrl != null){
+				flashCtrl.getElementsByTagName('object')[0].style.visibility="visible";
+				if(id == 'help_off'){
+					document.getElementById('jobZoneMap').getElementsByTagName('object')[0].style.visibility="hidden";
+				}
+			}
+
+			if(document.getElementById(id) != null){
+				document.getElementById(id).style.display="block";
+			}
+		}
+	}
+	
+	if(id == 'more'){ // open
+		createCookie("custMenuOpenYn", "Y");
+	}else if(id == 'more_off'){ // close
+		createCookie("custMenuOpenYn", "N");
+	}
+}
+
+function createCookie(cookieName, cookieVal){
+	var expireDate = new Date();
+	expireDate.setDate(expireDate.getDate());
+	document.cookie = cookieName + "=" + cookieVal + "; path=/;";
+}
+
+function f_registerCustomMenu() {
+	var frm = document.custFrm;
+	
+	if(confirm('저장하시겠습니까?'))frm.submit();
+	
+}
+
+function f_clearCustMenu() {
+	var menuIds = document.custFrm.menuId;
+	
+	if(menuIds == 'undefined' || menuIds == null) return;
+	
+	if(menuIds.length > 1){
+		for(var i=0;i<menuIds.length;i++){
+			menuIds[i].checked = false;
+		}	
+	}else{
+		menuIds.checked = false;
+	}
+}
+
+function f_countChk(obj) {
+	var menuIds = document.custFrm.menuId;
+	var cnt = 0;
+	
+	for(var i=0;i<menuIds.length;i++){
+		if(menuIds[i].checked) cnt = cnt + 1;
+	}
+	if(cnt > 12){
+		alert('나만의 맞춤 메뉴는 12개까지 설정 가능합니다.');
+		obj.checked = false;
+	}	
+}
+
+//]]>
+</script>
+<form name="custFrm" id="custFrm" action="/common/menu/registerCustomMenu.do" method="post">
+
+<div id="quick">
+	<div id="quickon">
+		<div class="quicktop">
+			<img src="/images/common/quick/quick_txt01.gif" alt="나만의 맞춤메뉴" />
+			<div class="quickset">
+				<span><a href="#quickset" onclick="showHide('quicksetsel');return false;"><img src="/images/common/quick/btn_quicksetup.gif" alt="설정" /></a></span>
+				<div id="quicksetsel" style="display:none">
+					<img src="/images/common/quick/arrow.gif" class="qkarrow" alt="img" />
+					<h4>나만의 맞춤 메뉴 설정 <a href="#" onclick="showHide('help'); return false;"><img src="/images/common/btn/btn_question2.gif" alt="도움말" style="vertical-align:bottom; position:relative;" /></a></h4>
+					<div id="help">
+						<img src="/images/common/quick/tit_help.gif" alt="나만의 맞춤메뉴" /><br />
+						<img src="/images/common/quick/txt_help.gif" alt="자주 사용하는 메뉴를 나만의 맞춤메뉴로 설정하면, 원하는 메뉴로 빠르게 이동할 수 있습니다." />
+						<b>이용안내</b>
+						<ul>
+							<li><span>① 메뉴에서 자주 사용하는 메뉴 선택</span> <img src="/images/common/quick/img_help01.gif" alt="상단 문구 참조" /></li>
+							<li><span>② 설정 내용 저장</span> <img src="/images/common/quick/img_help02.gif" alt="상단 문구 참조" /></li>
+						</ul>
+						<a href="#help" onclick="showHide('help_off');return false;"><img class="controll" src="/images/common/quick/help_off.gif" alt="닫기" /></a>
+					</div>
+					<p>나만의 맞춤 메뉴는 <strong>12개</strong>까지 설정 가능합니다.</p>
+					<div class="qwrap">
+												
+					</div>
+					<div class="btn">
+						<a href="#clear" onclick="f_clearCustMenu();"><img src="/images/common/btn/btn_reset03.gif" alt="설정초기화" /></a>
+						<a href="#reg" onclick="f_registerCustomMenu();"><img src="/images/common/btn/btn_save.gif" alt="저장" /></a>
+						<a href="#quicksetsel" onclick="showHide('quicksetsel_off');return false;"><img class="qclose" src="/images/common/btn/btn_close02.gif" alt="닫기" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="more_off">
+		
+			<a href="#more_off" onclick="showHide('more'); return false;"><img src="/images/common/quick/btn_more.gif" alt="열기" /></a>
+		
+		
+		</div>
+		
+		<div id="more" style="display:none;">
+			<!-- 나만의 맞춤메뉴가 3개 이상일때만 hmax클래스 넣어주세요. -->
+			<div id="quickwrap" class="wrap_quickin hmax">
+			<!-- 나만의 맞춤메뉴가 3개 이상일때만 three클래스 넣어주세요. -->
+			<ul id="quicklist" class="quickin three">
+				
+				<li><a href="/empInfo/empInfoSrch/list/dtlEmpSrchList.do"><img src="/images/common/quick/seeker_simpleSrch.gif" alt="채용정보검색" /></a></li>
+				
+				<li><a href="/indivMemberSrv/aplentMng/aplentHist/emailAplentHistList.do"><img src="/images/common/quick/seeker_enterSptAdmin.gif" alt="입사지원 관리" /></a></li>
+				
+				<li><a href="/useInfo/empCenterInfo/useEmpIntroList.do"><img src="/images/common/quick/seeker_center.gif" alt="고용센터 안내" /></a></li>
+				
+			</ul>
+			</div>
+			<a href="#more" id="btn_up"><img class="up" src="/images/common/quick/btn_up.gif" alt="위로 이동" /></a>
+			<a href="#more" id="btn_down"><img class="down" src="/images/common/quick/btn_down.gif" alt="아래로 이동" /></a>
+			<a href="#more" onclick="showHide('more_off'); return false;"><img src="/images/common/quick/btn_close.gif" alt="닫기" /></a>
+		</div>
+	</div>
+	
+	
+		
+			<br><a href="http://www.work.go.kr/yes" target="_blank" style="margin-left:4px;"><img src="/images/event/yesNewjob/jobyoungLeftYes.jpg" alt="중장년층 새일찾기 프로젝트" /></a>
+		
+		
+	
+	
+</div>
+<input type="submit" style="display:none;" />
+</form>
+<script type="text/javascript"> 
+//<![CDATA[
+	quick();
+//]]>
+</script>
+</div>
+<hr/>
+</div>
+
+<div id="footer">
+
+
+
+<div id="footin">
+<ul>
+	<li><a href="/useInvite/worknetHomepgInvite/worknetIntro.do"><img src="/images/common/layout/footer_menu01.gif" alt="워크넷 소개" /></a></li>
+	<li><a href="/useInvite/worknetHomepgInvite/useClause1.do"><img src="/images/common/layout/footer_menu02.gif" alt="이용약관" /></a></li>
+	<li><a href="/useInvite/worknetHomepgInvite/indivInfoPrtecPolicy32.do"><img src="/images/common/layout/footer_menu03.gif" alt="개인정보처리방침" /></a></li>
+	<li><a href="/useInvite/worknetHomepgInvite/emailAddrWonoticeGatherRefuse.do"><img src="/images/common/layout/footer_menu04.gif" alt="이메일주소무단수집거부" /></a></li>
+	<li><a href="/useInvite/worknetHomepgInvite/cprgtPolicyAsAllianceInq.do"><img src="/images/common/layout/footer_menu05.gif" alt="저작권정책 및 제휴문의" /></a></li>
+	<li><a href="/contents.do?relAddr=/useInvite/worknetHomepgInvite/workBanner&amp;titleId=UIFG000001"><img src="/images/common/layout/footer_menu06.gif" alt="워크넷 배너 가져가기" /></a></li>
+</ul>
+<form name="site" action="/common/forward.jsp" target="_blank" onsubmit="javascript:if('' == site.moveUrl.value) {alert('사이트를 선택하세요'); return false;}">
+<span class="family">
+	<a href="http://www.ei.go.kr/" target="_blank"><img src="/images/common/layout/ei.gif" alt="고용보험" /></a>
+	<a href="http://www.hrd.go.kr/" target="_blank"><img src="/images/common/layout/hrdnet.gif" alt="HRD-Net" /></a>
+	<select name="moveUrl" title="패밀리 사이트 선택" style="width:110px; height:20px; margin-left:10px;">
+		<option value="">패밀리 사이트</option>
+		<option value="http://www.ei.go.kr">고용보험</option>
+		<option value="http://www.hrd.go.kr/">직업능력개발훈련</option>
+		<option value="http://www.worktogether.or.kr/main.do?JGWTOKEN=">장애인고용포털</option>
+		<option value="http://www.eps.go.kr">외국인고용</option>
+		<option value="http://www.q-net.or.kr">자격정보</option>
+		<option value="/member/popup/procKorea.do">대한민국 정부포털</option>
+		<option value="http://www.worldjob.or.kr">월드잡</option>
+		<option value="http://www.tvworknet.or.kr">한국직업방송</option>
+	</select>
+	<input type="image" src="/images/common/btn/btn_new02.gif" alt="이동" />
+</span>
+</form>
+<span class="logo">
+	<a href="http://www.moel.go.kr/" target="_blank"><img src="/images/common/layout/foot_logo01.gif" alt="고용노동부" /></a>
+	<a href="http://www.keis.or.kr/" target="_blank"><img src="/images/common/layout/foot_logo02.gif" alt="한국고용정보원" /></a>
+</span>
+<address><img src="/images/common/layout/address02.gif" alt="150-836 서울시 영등포구 문래공원길5 한국고용정보원 시스템관련문의 : workmaster@keis.or.kr Tel : 1577-7114 Fax : (02)2629-7749" /></address>
+<p><img src="/images/common/layout/copyright.gif" alt="Copyright &copy; 2011 고용노동부 한국고용정보원  all rights reserved." /></p>
+<span class="siteinfo">
+	<img src="/images/common/layout/worknet_QRcode.gif" alt="워크넷 QR코드" /> 
+	<img src="/images/common/layout/eprivacy.gif" alt="개인정보보호우수사이트" /> 
+	<a href="/html/wauMark.html" onclick="try { latte.getEvent(event).stop(); } catch (ex) {};window.open(this.href,'mark01','width=780,height=800,scrollbars=yes');return false;"><img src="/images/common/layout/accessibility.gif" alt="웹접근성인증wau - (사)한국신체장애인복지회" /></a>
+</span>
+</div>
+</div>
 </body>
 </html>
