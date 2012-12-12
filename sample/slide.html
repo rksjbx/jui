@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="nationality" content="korean" />
+<meta name="language" content="ko" />
+<meta name="content-language" content="kr" />
+<title>JUI 슬라이드 샘플 - jQuery.fn.jui.slide.js</title>
+<style>
+html,body {height:100%}
+body {margin:0; padding:0; font-family:"돋움", "굴림", Arial, sans-serif, verdana, AppleGothic; font-size:12px; color:#333}
+* {margin:0; padding:0;}
+select, textarea {border:1px solid #B7B6B6; background:#FFF; vertical-align:middle; font-size:1em}
+strong,b {font-weight:bold}
+img, fieldset {border:0}
+select, input, li img, span#location img,td *,fieldset * {vertical-align:middle}
+ul, li, ol {list-style-type : none}
+hr {display:none}
+a {color:#666; text-decoration:none}
+a:hover{text-decoration:none}
+a:link, a:visited, a:active, a:hover {color:#444}
+td * {vertical-align:middle}
+
+#wrap {margin:15px}
+.sample {padding:15px; *zoom:1}
+.sample:after {content:""; display:block; clear:both}
+.codeview {margin-left:15px; width:550px; height:280px}
+.slide {margin-bottom:40px}
+.slide, .codeview {float:left}
+
+.slide .slide-screen {top:0px; left:0px}
+.slide .slide-navigation * {display:inline}
+
+.slide, .slide-screen, .slide-next, .slide-toggle {position:relative}
+.slide, .slide-screen, .slide-navigation, .slide-control {z-index:10}
+.slide-control, .slide-navigation {position:absolute; top:255px}
+
+.slide-control {left:10px}
+.slide-navigation {left:120px}
+</style>
+<script type="text/javascript" src="../codeview.js"></script>
+<script type="text/javascript" src="../jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../jQuery.fn.jui.js"></script>
+<script type="text/javascript" src="../jQuery.fn.jui.slide.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+<div id="wrap">
+
+<div class="sample">
+	<h3>&lt;1. 단순&gt; 자동 + 수평</h3>
+	<div class="slide slide1">
+		<ul class="slide-screen">
+			<li><a href="http://naver11.com"><img src="slide/popup01.jpg" /></a></li>
+			<li><a href="http://naver2.com"><img src="slide/popup02.jpg" /></a></li>
+			<li><a href="http://naver3.com"><img src="slide/popup03.jpg" /></a></li>
+			<li><a href="http://naver4.com"><img src="slide/popup04.jpg" /></a></li>
+			<li><a href="http://naver5.com"><img src="slide/popup05.jpg" /></a></li>
+			<li><a href="http://naver6.com"><img src="slide/popup06.jpg" /></a></li>
+		</ul>
+	</div>
+	<pre class="codeview javascript">
+$('.slide1 > .slide-screen').jui('slide');
+	</pre>
+</div>
+<script>
+<!--
+$(function () {
+	$('.slide1 > .slide-screen').jui('slide', {slideAuto:false});
+});
+//-->
+</script>
+<div>
+
+<div class="sample">
+	<h3>&lt;2. 일반&gt; 자동 + 수평 + 컨트롤</h3>
+	<div class="slide slide2">
+		<ul class="slide-screen">
+			<li><a href="http://naver1.com"><img src="slide/popup01.jpg" /></a></li>
+			<li><a href="http://naver2.com"><img src="slide/popup02.jpg" /></a></li>
+			<li><a href="http://naver3.com"><img src="slide/popup03.jpg" /></a></li>
+			<li><a href="http://naver4.com"><img src="slide/popup04.jpg" /></a></li>
+			<li><a href="http://naver5.com"><img src="slide/popup05.jpg" /></a></li>
+			<li><a href="http://naver6.com"><img src="slide/popup06.jpg" /></a></li>
+		</ul>
+		<div class="slide-control">
+			<button type="button" class="slide-prev">&lt;</button>
+			<button type="button" class="slide-next">&gt;</button>
+			<button type="button" class="slide-toggle">○</button>
+		</div>
+	</div>
+	<pre class="codeview javascript">
+$('.slide2 > .slide-screen').jui('slide', {
+	slideInterval : 3000,	// 슬라이드 시간 간격 (3sec)
+	prevButton    : $('.slide2 .slide-prev'),   // 이전버튼           
+	nextButton    : $('.slide2 .slide-next'),   // 다음버튼           
+	toggleButton  : $('.slide2 .slide-toggle'), // 토글(동작/정지)버튼
+	play          : function (settings) {
+		settings.toggleButton.html('■');
+	},
+	stop          : function (settings) {
+		settings.toggleButton.html('▶');
+	}
+});
+	</pre>
+</div>
+<script>
+<!--
+$(function () {
+	$('.slide2 > .slide-screen').jui('slide', {
+		slideInterval : 3000,	// 슬라이드 시간 간격 (3sec)
+		slideSpeed		: 3000,		// 슬라이드 애니메이션 속도
+		prevButton    : $('.slide2 .slide-prev'),   // 이전버튼
+		nextButton    : $('.slide2 .slide-next'),   // 다음버튼
+		toggleButton  : $('.slide2 .slide-toggle'), // 토글(동작/정지)버튼
+		play          : function (settings) {
+			settings.toggleButton.html('■');
+		},
+		stop          : function (settings) {
+			settings.toggleButton.html('▶');
+		}
+	});
+});
+//-->
+</script>
+
+<div class="sample">
+	<h3>&lt;3. 고급&gt; 수동 + 수평 + 컨트롤 + 네비게이션</h3>
+	<div class="slide slide3">
+		<ul class="slide-screen">
+			<li><a href="http://naver1.com"><img src="slide/popup01.jpg" /></a></li>
+			<li><a href="http://naver2.com"><img src="slide/popup02.jpg" /></a></li>
+			<li><a href="http://naver3.com"><img src="slide/popup03.jpg" /></a></li>
+			<li><a href="http://naver4.com"><img src="slide/popup04.jpg" /></a></li>
+			<li><a href="http://naver5.com"><img src="slide/popup05.jpg" /></a></li>
+			<li><a href="http://naver6.com"><img src="slide/popup06.jpg" /></a></li>
+		</ul>
+		<div class="slide-control">
+			<button type="button" class="slide-prev">&lt;</button>
+			<button type="button" class="slide-next">&gt;</button>
+			<button type="button" class="slide-play">▶</button>
+			<button type="button" class="slide-stop">■</button>
+		</div>
+		<ul class="slide-navigation">
+			<li><button type="button">#1</button></li>
+			<li><button type="button">#2</button></li>
+			<li><button type="button">#3</button></li>
+			<li><button type="button">#4</button></li>
+			<li><button type="button">#5</button></li>
+			<li><button type="button">#6</button></li>
+		</ul>
+	</div>
+	<pre class="codeview javascript">
+$('.slide3 > .slide-screen').jui('slide', {
+	slideAuto       : false, // 수동 슬라이드
+	slideInterval   : 2000,  // 슬라이드 시간 간격 (2sec)
+	prevButton      : $('.slide3 .slide-prev'), // 이전버튼
+	nextButton      : $('.slide3 .slide-next'), // 다음버튼
+	playButton      : $('.slide3 .slide-play'), // 동작버튼
+	stopButton      : $('.slide3 .slide-stop'), // 정지버튼
+	slideNavigation : $('.slide3 .slide-navigation button'),
+	play            : function (settings) {
+		settings.playButton.attr('disabled', true);
+		settings.stopButton.attr('disabled', false);
+		settings.stopButton.get(0).focus();
+	},
+	stop            : function (settings) {
+		settings.playButton.attr('disabled', false);
+		settings.stopButton.attr('disabled', true);
+		settings.playButton.get(0).focus();
+	}
+});
+	</pre>
+</div>
+<script>
+<!--
+$(function () {
+	$('.slide3 > .slide-screen').jui('slide', {
+		slideAuto		: false,	// 수동 슬라이드
+		slideInterval	: 2000,		// 슬라이드 시간 간격 (2sec)
+		prevButton		: $('.slide3 .slide-prev'), // 이전버튼
+		nextButton		: $('.slide3 .slide-next'), // 다음버튼
+		playButton		: $('.slide3 .slide-play'), // 동작버튼
+		stopButton		: $('.slide3 .slide-stop'), // 정지버튼
+		slideNavigation	: $('.slide3 .slide-navigation button'),
+		play			: function (settings) {
+			settings.playButton.attr('disabled', true);
+			settings.stopButton.attr('disabled', false);
+			settings.stopButton.get(0).focus();
+		},
+		stop			: function (settings) {
+			settings.playButton.attr('disabled', false);
+			settings.stopButton.attr('disabled', true);
+			settings.playButton.get(0).focus();
+		}
+	});
+});
+//-->
+</script>
+
+
+<div class="sample">
+	<h3>&lt;고급&gt; 수동 + 수직 + 속도</h3>
+	<div class="slide slide4">
+		<ul class="slide-screen">
+			<li><a href="http://naver1.com"><img src="slide/popup01.jpg" /></a></li>
+			<li><a href="http://naver2.com"><img src="slide/popup02.jpg" /></a></li>
+			<li><a href="http://naver3.com"><img src="slide/popup03.jpg" /></a></li>
+			<li><a href="http://naver4.com"><img src="slide/popup04.jpg" /></a></li>
+			<li><a href="http://naver5.com"><img src="slide/popup05.jpg" /></a></li>
+			<li><a href="http://naver6.com"><img src="slide/popup06.jpg" /></a></li>
+		</ul>
+		<div class="slide-control">
+			<button type="button" class="slide-prev">△</button>
+			<button type="button" class="slide-next">▽</button>
+			<button type="button" class="slide-play">▶</button>
+			<button type="button" class="slide-stop">■</button>
+		</div>
+	</div>
+	<pre class="codeview javascript">
+$('.slide4 > .slide-screen').jui('slide', {
+	slideDirection : 'vertical', // 수직 슬라이드
+	slideAuto      : false,      // 수동 슬라이드
+	slideInterval  : 2500,       // 슬라이드 시간 간격 (2.5sec)
+	slideSpeed     : 'slow',     // 슬라이드 애니메이션 속도
+	prevButton     : $('.slide4 .slide-prev'), // 이전버튼
+	nextButton     : $('.slide4 .slide-next'), // 다음버튼
+	playButton     : $('.slide4 .slide-play'), // 동작버튼
+	stopButton     : $('.slide4 .slide-stop'), // 정지버튼
+	play           : function (settings) {
+		settings.playButton.attr('disabled', true);
+		settings.stopButton.attr('disabled', false);
+		settings.stopButton.get(0).focus();
+	},
+	stop			: function (settings) {
+		settings.playButton.attr('disabled', false);
+		settings.stopButton.attr('disabled', true);
+		settings.playButton.get(0).focus();
+	}
+});
+	</pre>
+</div>
+<script>
+<!--
+$(function () {
+	$('.slide4 > .slide-screen').jui('slide', {
+		slideDirection	: 'vertical',	// 수직 슬라이드
+		slideAuto		: false,		// 수동 슬라이드
+		slideInterval	: 2500,			// 슬라이드 시간 간격 (2.5sec)
+		slideSpeed		: 'slow',		// 슬라이드 애니메이션 속도
+		prevButton		: $('.slide4 .slide-prev'), // 이전버튼
+		nextButton		: $('.slide4 .slide-next'), // 다음버튼
+		playButton		: $('.slide4 .slide-play'), // 동작버튼
+		stopButton		: $('.slide4 .slide-stop'), // 정지버튼
+		play			: function (settings) {
+			settings.playButton.attr('disabled', true);
+			settings.stopButton.attr('disabled', false);
+			settings.stopButton.get(0).focus();
+		},
+		stop			: function (settings) {
+			settings.playButton.attr('disabled', false);
+			settings.stopButton.attr('disabled', true);
+			settings.playButton.get(0).focus();
+		}
+	});
+});
+//-->
+</script>
+
+</div>
+</body>
+</html>
+<table>
+<thead>
+	<tr>
+		<th>Parameter</th>
+		<th>Data type</th>
+		<th>Option</th>
+		<th>Default</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<th>slideDirection</th>
+		<td>String</td>
+		<td>ㅇ</td>
+		<td>'horizon'</td>
+	</tr>
+	<tr>
+		<th>slideAuto</th>
+		<td>Boolean</td>
+		<td>ㅇ</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<th>slideInterval</th>
+		<td>Number</td>
+		<td>ㅇ</td>
+		<td>2500</td>
+	</tr>
+	<tr>
+		<th>slideSpeed</th>
+		<td>Number / String</td>
+		<td>ㅇ</td>
+		<td>'past'</td>
+	</tr>
+	<tr>
+		<th>slides</th>
+		<td>Number / String</td>
+		<td>ㅇ</td>
+		<td>$()</td>
+	</tr>
+	<tr>
+		<th>slideNavigation</th>
+		<td>ㅇ</td>
+		<td>$()</td>
+	</tr>
+	<tr>
+		<th>prevButton</th>
+		<td>ㅇ</td>
+		<td>$()</td>
+	</tr>
+	<tr>
+		<th>nextButton</th>
+		<td>ㅇ</td>
+		<td>$()</td>
+	</tr>
+	<tr>
+		<th>playButton</th>
+		<td>ㅇ</td>
+		<td>$()</td>
+	</tr>
+	<tr>
+		<th>stopButton</th>
+		<td>ㅇ</td>
+		<td>$()</td>
+	</tr>
+	<tr>
+		<th>toggleButton</th>
+		<td>ㅇ</td>
+		<td>$()</td>
+	</tr>
+	<tr>
+		<th>slideDisplayClass</th>
+		<td>ㅇ</td>
+		<td>'slide-display'</td>
+	</tr>
+	<tr>
+		<th>slideNextClass</th>
+		<td>ㅇ</td>
+		<td>'slide-next'</td>
+	</tr>
+	<tr>
+		<th>slideShowNaviClass</th>
+		<td>ㅇ</td>
+		<td>'slide-show'</td>
+	</tr>
+	<tr>
+		<th>slides</th>
+		<td>ㅇ</td>
+		<td>this.find('>*')</td>
+	</tr>
+	<tr>
+		<th>show</th>
+		<td>ㅇ</td>
+		<td>blankFnc</td>
+	</tr>
+	<tr>
+		<th>prev</th>
+		<td>ㅇ</td>
+		<td>blankFnc</td>
+	</tr>
+	<tr>
+		<th>next</th>
+		<td>ㅇ</td>
+		<td>blankFnc</td>
+	</tr>
+	<tr>
+		<th>play</th>
+		<td>ㅇ</td>
+		<td>blankFnc</td>
+	</tr>
+	<tr>
+		<th>stop</th>
+		<td>ㅇ</td>
+		<td>blankFnc</td>
+	</tr>
+	<tr>
+		<th>pause</th>
+		<td>ㅇ</td>
+		<td>blankFnc</td>
+	</tr>
+	<tr>
+		<th>resume</th>
+		<td>ㅇ</td>
+		<td>blankFnc</td>
+	</tr>
+</tbody>
+</table>

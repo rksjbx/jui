@@ -1,5 +1,6 @@
 (function ($) {
-var ns = $.fn.nsjui;
+var ns	= $.fn.nsjui,
+	jui	= $.fn[ns];
 
 
 
